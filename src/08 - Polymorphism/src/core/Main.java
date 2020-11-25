@@ -1,8 +1,15 @@
 package core;
 
 import attraction.Exhibition;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 import dinosaur.*;
 import environment.TropicalStorm;
+import people.Human;
+import people.TourGuide;
+import people.Visitor;
+import security.ExplosionExpert;
+import security.Leader;
+import security.Ranger;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -16,6 +23,19 @@ public class Main {
     */
     Exhibition exhibition = new Exhibition();
     exhibition.seeDinos();
+
+    ArrayList<Human> people = new ArrayList<>();
+    Ranger ranger = new Leader();
+    Ranger expert = new ExplosionExpert();
+
+    people.add(new Visitor());
+    people.add(new ExplosionExpert());
+    people.add(new Leader());
+    people.add(new TourGuide());
+
+    System.out.println("Group Leader " + ranger.protect(people));
+    System.out.println("Explosion expert " + expert.protect(people));
+
 
     /*
     TropicalStorm tropicalStorm = new TropicalStorm(6, 0);

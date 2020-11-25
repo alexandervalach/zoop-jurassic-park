@@ -19,6 +19,10 @@ public class Exhibition {
     carnivores.add(new Allosaur());
     herbivores.add(new Triceratops());
 
+    Herbivore herbivore = new Stegosaur();
+    System.out.println("Polymorphism example");
+    herbivore.roar();
+
     printDinos();
 
     // dinosaurs.set(1, dinosaurs.get(0));
