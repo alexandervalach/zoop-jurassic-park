@@ -3,7 +3,7 @@ package dinosaur;
 public abstract class Herbivore implements Dinosaur {
 
   public Herbivore() {
-    roar();
+
   }
 
   @Override

@@ -16,14 +16,27 @@ public class Exhibition {
 
   public void seeDinos () {
     herbivores.add(new Stegosaur());
-    carnivores.add(new Allosaur());
     herbivores.add(new Triceratops());
+    carnivores.add(new Allosaur());
+    // UPCASTING
+    System.out.println("UPCASTING");
+    Carnivore carnivore = (Carnivore) new Allosaur();
+    Herbivore herbivore1 = new Stegosaur();
+    Herbivore herbivore2 = new Triceratops();
 
-    Herbivore herbivore = new Stegosaur();
-    System.out.println("Polymorphism example");
-    herbivore.roar();
+    //
+    System.out.println(herbivore1.getClass());
+    System.out.println(herbivore2.getClass());
+
+    herbivore1.roar();
 
     printDinos();
+
+    // DOWNCASTING
+    Stegosaur stegosaur = (Stegosaur) herbivore1;
+    System.out.println("DOWNCASTING");
+    System.out.println(stegosaur.getClass());
+    stegosaur.roar();
 
     // dinosaurs.set(1, dinosaurs.get(0));
     /*
